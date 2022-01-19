@@ -22,4 +22,16 @@ Please follow along as the instructor explores schema design with this API.
 select * from fruits where id = 2;
 
 insert into fruits (name, avgWeightOz) values (25, 'bar')
+
+
+Day2
+npx knex init  //Created ./knexfile.js
+npx knex migrate:make table-fruits
+npx knex migrate:up 
+npx knex migrate:down
+
+
+
+
+https://www.youtube.com/watch?v=88jg5W40Jw8
 ```

@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
       res.status(500).json({ message: 'Failed to retrieve fruits' });
     });
 });
-
+// TEST: http get 9000:/api/fruits
 router.get('/:id', (req, res) => {
   Fruit.getById(req.params.id)
     .then(fruit => {
