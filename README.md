@@ -21,7 +21,9 @@ Please follow along as the instructor explores schema design with this API.
 ```
 select * from fruits where id = 2;
 
-insert into fruits (name, avgWeightOz) values (25, 'bar')
+insert into fruits (name, avgWeightOz) values ('bar', 35)
+insert into fruits (name, avgWeightOz, delicious) values ('fiz', 25, 0)
+insert into fruits (name, avgWeightOz, delicious, color) values ('pineapple', 25, true, 'yellow')
 
 
 Day2
@@ -29,7 +31,8 @@ npx knex init  //Created ./knexfile.js
 npx knex migrate:make table-fruits
 npx knex migrate:up 
 npx knex migrate:down
-
+npx knex migrate:make delicious-col-fruits
+npx knex seed:make fruits
 
 
 
