@@ -21,9 +21,23 @@ Please follow along as the instructor explores schema design with this API.
 ```
 select * from fruits where id = 2;
 
+
 insert into fruits (name, avgWeightOz) values ('bar', 35)
 insert into fruits (name, avgWeightOz, delicious) values ('fiz', 25, 0)
 insert into fruits (name, avgWeightOz, delicious, color) values ('pineapple', 25, true, 'yellow')
+
+
+
+
+SELECT * FROM Customers
+WHERE City IN ('Paris','London');
+
+CREATE TABLE students (
+    id      INTEGER     PRIMARY KEY,
+    name    TEXT (128)  NOT NULL,
+    section INTEGER (0) NOT NULL,
+    email   TEXT (128) 
+);
 
 
 Day2
