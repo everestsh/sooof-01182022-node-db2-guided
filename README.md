@@ -25,6 +25,9 @@ insert into fruits (name, avgWeightOz) values ('bar', 35)
 insert into fruits (name, avgWeightOz, delicious) values ('fiz', 25, 0)
 insert into fruits (name, avgWeightOz, delicious, color) values ('pineapple', 25, true, 'yellow')
 
+INSERT INTO fruits (name, avgWeightOz, delicious) VALUES ("avocado", 12, TRUE);
+INSERT INTO fruits (name, avgWeightOz, delicious) VALUES ('apple', 130, TRUE), ('watermelon', 500, TRUE), ('dragonfruit', 0, false)
+
 
 Day2
 npx knex init  //Created ./knexfile.js
@@ -34,6 +37,8 @@ npx knex migrate:down
 npx knex migrate:make delicious-col-fruits
 npx knex seed:make fruits
 
+npx knex migrate:make fruits-update
+npx knex seed:run
 
 
 https://www.youtube.com/watch?v=88jg5W40Jw8
